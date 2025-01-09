@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+# Dockerisation
+>>>>>>> ebfcb38ee15c3b74dde76563641ca5e11d282727
 Accès au site via http://localhost:8080
 
 # 🐳 Compagnie Gourmande - Gestion des Employés
