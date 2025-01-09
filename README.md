@@ -1,14 +1,8 @@
-<<<<<<< HEAD
-=======
 # Dockerisation
->>>>>>> ebfcb38ee15c3b74dde76563641ca5e11d282727
-Accès au site via http://localhost:8080
 
-# 🐳 Compagnie Gourmande - Gestion des Employés
+# 🐳 Compagnie Gourmande - Affichage des Employés
 
-Bienvenue dans le projet **Compagnie Gourmande**. Ce projet est une application web Dockerisée permettant de gérer les employés d'une entreprise. Il comprend un **frontend**, un **backend**, et une base de données **MySQL**, orchestrés via **Docker Compose**.
-
----
+Bienvenue dans le projet **Compagnie Gourmande**. Ce projet est une simple application web Dockerisée affichant les employés d'une entreprise. Il comprend un **frontend**, un **backend**, et une base de données **MySQL**, gérés via **Docker Compose**.
 
 ## 📝 Table des matières
 
@@ -26,9 +20,9 @@ Bienvenue dans le projet **Compagnie Gourmande**. Ce projet est une application 
 
 ## 🌐 Aperçu
 
-Ce projet permet d'afficher et de gérer une liste d'employés, comprenant leur nom, prénom, email, salaire, et service. Il est structuré de la manière suivante :
+Ce projet permet d'afficher une liste d'employés, comprenant leur nom, prénom et email. Il est structuré de la manière suivante :
 
-- **Frontend :** Une interface utilisateur simple développée avec HTML/CSS et servie via **Nginx**.
+- **Frontend :** Une interface utilisateur tout ce qu'il y a de plus simple développée avec HTML/CSS et servie via **Nginx**.
 - **Backend :** Une API REST construite avec **Node.js** et **Express.js**.
 - **Base de données :** Une base MySQL contenant les informations des employés et des services.
 
@@ -58,3 +52,4 @@ Vérifiez les installations :
 docker --version
 docker-compose --version
 ```
+Accès au site via http://localhost:8080
