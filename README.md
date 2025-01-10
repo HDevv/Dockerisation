@@ -52,4 +52,98 @@ Vérifiez les installations :
 docker --version
 docker-compose --version
 ```
-Accès au site via http://localhost:8080
+
+Installer les dépendances
+```bash
+npm install
+```
+
+# 🚀 Étapes pour lancer l'application 
+
+## 1. Construire et démarrer les conteneurs 📦
+
+Placez-vous dans le dossier contenant le fichier `docker-compose.yml`.  
+Exécutez la commande suivante :
+
+```bash
+docker-compose up --build
+```
+
+Cette commande :
+- Construit les images Docker pour le frontend, le backend, et la base de données.
+- Lance tous les conteneurs définis dans `docker-compose.yml`.
+
+---
+
+## 2. Vérifier que tout est en cours d'exécution ✅
+
+Une fois les conteneurs démarrés, vérifiez leur statut avec :
+
+```bash
+docker ps
+```
+
+Vous devriez voir trois conteneurs : `frontend`, `backend`, et `db`.
+
+---
+
+## 3. Accéder à l'application 🌐
+
+Ouvrez un navigateur et accédez aux URL suivantes :
+
+### Frontend (application principale) :
+```text
+http://localhost:8080
+```
+Vous devriez voir votre page HTML principale.
+
+### Backend API :
+```text
+http://localhost:3000
+```
+Vous verrez le message : **Bienvenue sur l'API**.
+
+---
+
+## 4. Interagir avec la base de données 🧱
+
+Pour interagir avec MySQL dans le conteneur :
+
+```bash
+docker exec -it db mysql -u root -p
+```
+
+Entrez le mot de passe MySQL défini dans `docker-compose.yml` pour accéder à la base.
+
+---
+
+## Pour vérifier que l'application est Dockerisée 🐋
+
+Exécutez la commande suivante :
+
+```bash
+docker ps
+```
+
+Vous devriez voir trois conteneurs : `frontend`, `backend`, et `db`.  
+Cela confirme que l'application tourne à l'intérieur de conteneurs Docker.
+
+### Testez les URL sur les ports :
+- **Frontend**: `http://localhost:8080`  
+- **Backend**: `http://localhost:3000/api`
+
+Si ces URLs fonctionnent, l'application est correctement Dockerisée et opérationnelle.
+
+---
+
+## Arrêter l'application ⛔
+
+Pour arrêter les conteneurs :
+
+```bash
+docker-compose down
+```
+
+Cela arrête et supprime tous les conteneurs sans affecter les volumes ou les images.
+
+RAPPEL: Accès au site via http://localhost:8080
